@@ -8,7 +8,7 @@ RUN dnf install -y \
     lazygit \
     uv \
     ripgrep \
-    fzf-lua \
+    fzf \
     lua \
     bat \
     gcc \
