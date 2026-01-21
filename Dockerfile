@@ -14,6 +14,7 @@ RUN dnf install -y \
     lua \
     bat \
     gcc \
+    g++ \
     make \
     nodejs \
     tmux \
