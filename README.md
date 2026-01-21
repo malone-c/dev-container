@@ -4,7 +4,7 @@ The image built here solves OS/software versioning issues (e.g. Debian 11 is bas
 
 ## Features (see Dockerfile)
 
-* OS: Fedora 43
+* OS: `fedora:latest` (currently 43)
 * Packages
     * `git`
     * `neovim`
@@ -18,8 +18,10 @@ The image built here solves OS/software versioning issues (e.g. Debian 11 is bas
 
 # Distrobox setup
 
+Run these commands on the host machine.
+
 ```bash
-# Install distrobox on debian 11
+# Install distrobox
 /usr/bin/curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 # Create the distrobox
@@ -31,7 +33,8 @@ distrobox enter dev
 
 # Autostart on login
 
-Add this to your .profile:
+To have the container start on login, add this to your .profile on the host machine
+
 ```bash
 # Start distrobox on login
 if command -v distrobox &> /dev/null && [ -n "$CONTAINER_ID" ]; then
