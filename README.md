@@ -1,7 +1,18 @@
-# TODO
-- [x] Add dockerfile
-- [x] Add CD pipeline
-- [x] Add distrobox instructions to README.md
+# Dev container with updated software for development
+
+The image built here solves OS/software versioning issues (e.g. Debian 11 is based on an outdated version of glibc).
+
+* OS: Fedora 43
+* Packages
+    * git
+    * neovim
+    * lazygit
+    * tmux
+    * nodejs
+    * uv
+    * python3
+    * fzf
+
 
 # Distrobox setup
 
