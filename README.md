@@ -2,16 +2,18 @@
 
 The image built here solves OS/software versioning issues (e.g. Debian 11 is based on an outdated version of glibc).
 
+## Features (see Dockerfile)
+
 * OS: Fedora 43
 * Packages
-    * git
-    * neovim
-    * lazygit
-    * tmux
-    * nodejs
-    * uv
-    * python3
-    * fzf
+    * `git`
+    * `neovim`
+    * `lazygit`
+    * `tmux`
+    * `nodejs`
+    * `uv`
+    * `python3` (3.10-3.13)
+    * `fzf`
 
 
 # Distrobox setup
