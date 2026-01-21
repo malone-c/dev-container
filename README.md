@@ -36,8 +36,8 @@ distrobox enter dev
 To have the container start on login, add this to your .profile on the host machine
 
 ```bash
-# Start distrobox on login
-if command -v distrobox &> /dev/null && [ -n "$CONTAINER_ID" ]; then
+# Start distrobox if installed and not already inside a container
+if command -v distrobox &> /dev/null && [ -z "$CONTAINER_ID" ]; then
     distrobox enter dev
 fi
 ```
