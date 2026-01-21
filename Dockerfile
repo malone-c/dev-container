@@ -1,6 +1,6 @@
 FROM fedora:latest
 
-RUN sudo dnf copr enable dejan/lazygit
+RUN sudo dnf copr enable dejan/lazygit -y
 
 RUN dnf install -y \
     git \
