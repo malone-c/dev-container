@@ -4,6 +4,8 @@ RUN sudo dnf copr enable dejan/lazygit -y
 
 RUN dnf install -y \
     git \
+    gh \
+    chezmoi \
     neovim \
     lazygit \
     uv \
