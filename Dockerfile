@@ -16,10 +16,17 @@ RUN dnf install -y \
     gcc \
     g++ \
     make \
-    nodejs \
-    tmux \
-    && dnf clean all
+    nodejs
+
+# Zellij dependencies
+RUN dnf install -y \
+    cargo \
+    openssl-devel \
+    perl-FindBin \
+    perl-IPC-Cmd 
+
+RUN dnf clean all
+
+RUN cargo install --locked zellij
 
 RUN uv python install 3.10 3.11 3.12 3.13
-
-
