@@ -16,17 +16,12 @@ RUN dnf install -y \
     gcc \
     g++ \
     make \
-    nodejs
-
-# Zellij dependencies
-RUN dnf install -y \
-    cargo \
-    openssl-devel \
-    perl-FindBin \
-    perl-IPC-Cmd 
+    nodejs \
+    curl
 
 RUN dnf clean all
 
-RUN OPENSSL_NO_VENDOR=1 cargo install --locked zellij
+RUN curl -fsSL https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz \
+    | tar -xz -C /usr/local/bin
 
 RUN uv python install 3.10 3.11 3.12 3.13
