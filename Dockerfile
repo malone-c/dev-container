@@ -27,6 +27,6 @@ RUN dnf install -y \
 
 RUN dnf clean all
 
-RUN cargo install --locked zellij
+RUN OPENSSL_NO_VENDOR=1 cargo install --locked zellij
 
 RUN uv python install 3.10 3.11 3.12 3.13
